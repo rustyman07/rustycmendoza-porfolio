@@ -24,7 +24,7 @@ const About = ({ AboutHeaderRef, aboutRef, aboutCardRef, sec }) => {
         </h1>
         <div
           ref={aboutCardRef}
-          className={`main-card max-w-[900px] w-full  h-full m-auto  px-5`}
+          className={`main-card max-w-[900px] w-full  lg:h-[500px] h-[700px] m-auto  px-5`}
         >
           <div
             className={`card-container  ${flipCard ? "rotate180 " : null}  
@@ -32,9 +32,9 @@ const About = ({ AboutHeaderRef, aboutRef, aboutCardRef, sec }) => {
           >
             <div
               ref={card}
-              className={`card backface-hidden  relative origin-top flex sm:flex-row flex-col-reverse ratate0deg shadow-xl`}
+              className={`card backface-hidden h-full relative flex sm:flex-row flex-col-reverse ratate0deg shadow-xl`}
             >
-              <div className="left sm:w-[40%] w-full">
+              <div className="left sm:w-[40%] w-full ">
                 <img
                   ref={imgRef}
                   className={`w-full h-full object-cover`}
@@ -44,7 +44,7 @@ const About = ({ AboutHeaderRef, aboutRef, aboutCardRef, sec }) => {
               </div>
               <div
                 ref={textRef}
-                className="right font-thin sm:w-[60%] w-full md:p-12 p-5 py-[50px] sm:text-base text-sm relative"
+                className="right font-thin sm:w-[60%] w-full md:p-12 p-5  sm:text-base text-sm relative h-full"
               >
                 <p className=" text-secondary-black  dark:text-[#999999] ">
                   Hello, I am Rusty C. Mendoza A{" "}
