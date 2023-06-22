@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .link-active {
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    background-color: #f5cb5b;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+  }
+  .card-shadow {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .link {
+    height: 4px;
+    width: 0;
+
+    left: 0;
+    bottom: -5px;
+    background-color: #f5cb5b;
+    position: absolute;
+    z-index: -1;
+    transform-origin: left;
+    transition: all 0.3s ease;
+  }
+  .sec-content-wrapper {
+    min-height: inherit;
+  }
+  .rotate180 {
+    transform: rotateY(180deg);
+  }
+  .-rotate180 {
+    transform: rotateY(-180deg);
+  }
+  .nav-height {
+    height: 56px;
+  }
+
+  .card-container {
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+  }
+  .main-card {
+    perspective: 4000px;
+  }
+
+  /* .grid-logo{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1f))
+  } */
+  /* .nav-item:hover.link {
+    width: 100%;
+    opacity: 1;
+  } */
+
+  /* .sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    height: 100vh;
+    width: 100vw;
+  } */
+  /* .sec-content-wrapper {
+
+    width: 100%;
+  } */
+  /* @media screen and (min-width: 768px) {
+    .sec-content-wrapper {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    .sec-content-wrapper {
+      min-height: calc(100vh - 56px);
+      width: 100%;
+    }
+  } */
+}
+@layer base {
+  body {
+    @apply text-secondary-black;
+  }
+  section {
+    @apply bg-secondary-white;
+    @apply dark:bg-primary-black;
+
+    /* @apply py-[50px] md:py-[100px]; */
+    @apply min-h-screen;
+  }
+  .sec-content-wrapper {
+    @apply w-full h-full  md:py-[150px] py-[100px];
+  }
+  section:nth-child(odd) {
+    @apply dark:bg-secondary-black bg-white;
+  }
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
