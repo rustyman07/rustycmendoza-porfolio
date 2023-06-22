@@ -191,7 +191,6 @@ function App() {
         start: "top 60%",
         end: "80% 20%",
         toggleActions: "restart none none none",
-        markers: true,
       },
     });
   };

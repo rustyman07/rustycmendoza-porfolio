@@ -73,36 +73,35 @@ const About = ({ AboutHeaderRef, aboutRef, aboutCardRef, sec }) => {
               className={`
                rotate180 absolute card-face left-0 right-0 top-0 bottom-0 w-full backface-hidden shadow-xl sm:text-base text-sm  lg:h-[450px] h-[700px]`}
             >
-              <div className="relative h-full w-full">
-                <h1 className="text-2xl text-center mt-7">Tech Skills</h1>
-                {logos.length ? (
-                  <div className="grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-7 p-5  justify-items-center rounded">
-                    {logos.map((logo, id) => (
-                      <div
-                        key={logo.title}
-                        className=" flex justify-center items items-center font-montserrat uppercase text-xs gap-2 shadow-md py-1 px-2 w-[120px] text-[#999999]  dark:hover:text-white"
-                      >
-                        <img
-                          className=" lg:h-15 h-6  object-cover hover:scale-[1.3] transition ease-in-out delay-150 duration-300 "
-                          src={logo.src}
-                          alt=""
-                        />
-                        <span>{logo.title}</span>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="flex justify-center items-center">
-                    <h1 className="text-2xl">Loading...</h1>
-                  </div>
-                )}
-                <span
-                  onClick={() => setFlipCard(false)}
-                  className="absolute bottom-[50px] right-[20px] cursor-pointer underline  dark:hover:text-white"
-                >
-                  <i>Click here </i>to show About Me
-                </span>
-              </div>
+              {" "}
+              <h1 className="text-2xl text-center mt-7">Tech Skills</h1>
+              {logos.length ? (
+                <div className="grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-7 p-5  justify-items-center rounded">
+                  {logos.map((logo, id) => (
+                    <div
+                      key={logo.title}
+                      className=" flex justify-center items items-center font-montserrat uppercase text-xs gap-2 shadow-md py-1 px-2 w-[120px] text-[#999999]  dark:hover:text-white"
+                    >
+                      <img
+                        className=" lg:h-15 h-6  object-cover hover:scale-[1.3] transition ease-in-out delay-150 duration-300 "
+                        src={logo.src}
+                        alt=""
+                      />
+                      <span>{logo.title}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex justify-center items-center">
+                  <h1 className="text-2xl">Loading...</h1>
+                </div>
+              )}
+              <span
+                onClick={() => setFlipCard(false)}
+                className="absolute bottom-[20px] right-[20px] cursor-pointer underline  dark:hover:text-white"
+              >
+                <i>Click here </i>to show About Me
+              </span>
             </div>
           </div>
         </div>
