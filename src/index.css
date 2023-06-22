@@ -34,9 +34,11 @@
   }
   .rotate180 {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
   }
   .-rotate180 {
     transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
   }
   .nav-height {
     height: 56px;
