@@ -180,17 +180,18 @@ function App() {
 
   const ContactcardsAnimation = (target, n, delay) => {
     gsap.from(target, {
-      x: isMobile ? (n % 2 == 0 ? 100 : -100) : null,
+      x: isMobile ? (n % 2 == 0 ? 200 : -200) : null,
       y: !isMobile ? 20 : null,
       delay: !isMobile ? delay : null,
       opacity: 0,
-      duration: 0.5,
+      duration: 1,
       scrollTrigger: {
-        trigger: !isMobile ? sec.current[3] : target,
+        trigger: sec.current[3],
         ease: "ease-in",
         start: "top 60%",
         end: "80% 20%",
         toggleActions: "restart none none none",
+        markers: true,
       },
     });
   };
