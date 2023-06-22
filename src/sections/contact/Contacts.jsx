@@ -32,7 +32,7 @@ const Contacts = ({ sec, contactHeaderRef, contactCardRef, isMobile }) => {
           ease: "ease-in",
           start: `${isMobile ? "30%" : "top"} 60%`,
           end: "70% 30%",
-          toggleActions: "restart reverse restart reverse",
+          toggleActions: "restart none none  reverse",
         },
       });
     });

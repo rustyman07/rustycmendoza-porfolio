@@ -53,7 +53,7 @@ function App() {
           trigger: sec.current[0],
           start: "80% 100%",
           end: "90% 40%",
-          toggleActions: "play reverse restart reverse",
+          toggleActions: "play none none reverse",
         });
       });
       headerAnimation(sec.current[1], AboutHeaderRef.current);
@@ -64,19 +64,21 @@ function App() {
   }, []);
 
   useLayoutEffect(() => {
-    gsap.from(aboutCardRef.current, {
-      y: 80,
-      duration: 1,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: sec.current[1],
-        ease: "ease-in",
-        start: "top 60%",
-        end: "85% 30%",
-        toggleActions: "restart reverse restart reverse",
-        markers: true,
-      },
+    let ctx = gsap.context(() => {
+      gsap.from(aboutCardRef.current, {
+        y: 80,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: sec.current[1],
+          ease: "ease-in",
+          start: "top 60%",
+          end: "bottom 30%",
+          toggleActions: "restart none none reverse",
+        },
+      });
     });
+    return () => ctx.revert();
   }, []);
 
   const show = () => {
@@ -104,6 +106,7 @@ function App() {
   const handleWindowSizeChange = () => {
     setOnResize(window.innerWidth);
   };
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       if (isMobile) {
@@ -135,7 +138,7 @@ function App() {
           trigger: sec.current[2],
           start: "center bottom",
           end: "center 10%",
-          toggleActions: "restart reverse restart reverse",
+          toggleActions: "restart none none reverse",
         },
       })
       .from(workCardRef.current, { y: 40, opacity: 0, stagger: 0.3 });
@@ -153,7 +156,7 @@ function App() {
         ease: "ease-in",
         start: "top 80%",
         end: "60% 50%",
-        toggleActions: "restart reverse restart reverse",
+        toggleActions: "restart none none reverse",
       },
     });
 
@@ -170,7 +173,7 @@ function App() {
         ease: "ease-in",
         start: "top 80%",
         end: "80% 20%",
-        toggleActions: "restart reverse restart reverse",
+        toggleActions: "restart none none reverse",
       },
     });
   };
@@ -187,7 +190,7 @@ function App() {
         ease: "ease-in",
         start: "top 60%",
         end: "80% 20%",
-        toggleActions: "restart reverse restart reverse",
+        toggleActions: "restart none none none",
       },
     });
   };

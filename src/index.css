@@ -45,9 +45,11 @@
   .card-container {
     transition: transform 1s ease;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
   }
   .main-card {
     perspective: 4000px;
+    -webkit-perspective: 4000px;
   }
 
   /* .grid-logo{
@@ -106,4 +108,6 @@
 
 .backface-hidden {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }

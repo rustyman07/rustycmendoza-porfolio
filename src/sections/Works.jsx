@@ -12,7 +12,7 @@ const Works = ({
   useEffect(() => {
     setData(data);
   }, []);
-
+  console.log("wirkds");
   return (
     <section
       ref={(ref) => sec.current.splice(2, 1, ref)}

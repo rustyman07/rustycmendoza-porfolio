@@ -1,13 +1,8 @@
 import React, { useRef, useState } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
-import gsap from "gsap";
 import { logos } from "../data";
 import resume from "../assets/Rusty-Resume.pdf";
 const About = ({ AboutHeaderRef, aboutRef, aboutCardRef, sec }) => {
-  gsap.registerPlugin(ScrollTrigger);
-
   const imgRef = useRef();
   const textRef = useRef();
   const card = useRef();
@@ -29,11 +24,11 @@ const About = ({ AboutHeaderRef, aboutRef, aboutCardRef, sec }) => {
         </h1>
         <div
           ref={aboutCardRef}
-          className={`main-card max-w-[900px] w-full   m-auto  px-5`}
+          className={`main-card max-w-[900px] w-full  h-full m-auto  px-5`}
         >
           <div
             className={`card-container  ${flipCard ? "rotate180 " : null}  
-             relative   z-100  w-full h-fulk dark:bg-secondary-black bg-white  text-primary-black dark:text-[#999999] `}
+             relative   z-100  w-full h-full dark:bg-secondary-black bg-white  text-primary-black dark:text-[#999999] `}
           >
             <div
               ref={card}
