@@ -59,21 +59,24 @@ function App() {
       headerAnimation(sec.current[1], AboutHeaderRef.current);
       headerAnimation(sec.current[2], worksHeaderRef.current);
       headerAnimation(sec.current[3], contactHeaderRef.current);
-      gsap.from(aboutCardRef.current, {
-        y: 80,
-
-        duration: 1,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: sec.current[1],
-          ease: "ease-in",
-          start: "top 60%",
-          end: "85% 30%",
-          toggleActions: "restart reverse restart reverse",
-        },
-      });
     });
     return () => ctx.revert();
+  }, []);
+
+  useLayoutEffect(() => {
+    gsap.from(aboutCardRef.current, {
+      y: 80,
+      duration: 1,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: sec.current[1],
+        ease: "ease-in",
+        start: "top 60%",
+        end: "85% 30%",
+        toggleActions: "restart reverse restart reverse",
+        markers: true,
+      },
+    });
   }, []);
 
   const show = () => {
