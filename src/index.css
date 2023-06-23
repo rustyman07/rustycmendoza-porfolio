@@ -98,7 +98,7 @@
     @apply dark:bg-primary-black;
 
     /* @apply py-[50px] md:py-[100px]; */
-    @apply min-h-screen;
+    @apply min-h-screen lg:min-h-screen;
   }
   .sec-content-wrapper {
     @apply w-full h-full  md:py-[150px] py-[100px];

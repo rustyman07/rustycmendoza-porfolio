@@ -28,7 +28,7 @@ const Works = ({
         </h1>
         <div
           ref={gridRef}
-          className="grid-container max-w-[1440px] m-auto grid lg:grid-cols-3 gap-5 lg:gap-12 sm:grid-cols-2  sm:px-0 px-5"
+          className="grid-container max-w-[1440px] m-auto grid lg:grid-cols-3 gap-5 lg:gap-12 sm:grid-cols-2  lg:px-0 px-5"
         >
           {getData.map((data, i) => (
             <div

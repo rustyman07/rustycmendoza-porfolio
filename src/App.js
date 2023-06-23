@@ -250,7 +250,7 @@ function App() {
       />
       {isMobile && (
         <div className="fixed  bottom-0 left-0 h-[56px] w-screen bg-white dark:bg-primary-black card-shadow ">
-          <div className="flex text-light-black text-2xl  h-full justify-between items-center px-12">
+          <div className="flex text-light-black text-2xl  h-full justify-between items-center md:px-12  md:gap-12 px-5 ">
             {navlink.map((item, i) => {
               const Icons = item.icon;
               return (

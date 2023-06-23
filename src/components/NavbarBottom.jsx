@@ -15,7 +15,7 @@ const NavbarBottom = ({
   return (
     <div
       ref={(ref) => parentEl.current.splice(index, 1, ref)}
-      className="relative h-full w-10  py-2 text-center "
+      className="relative h-full w-10  py-2 text-center md:flex-1 md:justify-center md:flex  "
     >
       {index === 0 ? (
         <div
