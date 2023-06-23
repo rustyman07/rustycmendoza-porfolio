@@ -83,7 +83,8 @@ const Contacts = ({ sec, contactHeaderRef, contactCardRef, isMobile }) => {
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    const regex1 = /^[a-zA-Z]*$/;
+    const regex1 = /^[A-Za-z\s]*$/;
+
     if (!values.user_name) {
       errors.user_name = "Name is required!";
     } else if (values.user_name.length < 3) {
