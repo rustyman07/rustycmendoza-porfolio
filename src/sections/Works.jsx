@@ -24,7 +24,7 @@ const Works = ({
           ref={worksHeaderRef}
           className="lg:text-6xl text-4xl font-bold mb-[50px] dark:text-primary-yellow text-center"
         >
-          My Works
+          My Projects
         </h1>
         <div
           ref={gridRef}
