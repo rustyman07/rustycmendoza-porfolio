@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { logos } from "../data";
-import resume from "../assets/Rusty-Resume.pdf";
+import resume from "../assets/RUSTY-MENDOZA-RESUME-2023.pdf";
 const About = ({ AboutHeaderRef, aboutRef, aboutCardRef, sec }) => {
   const imgRef = useRef();
   const textRef = useRef();
